@@ -11,10 +11,6 @@ set -- $wid
 wid=$(echo $5 | sed 's/,//g')
 echo $wid
 
-#gravity,x,y,width,height
-# point 0 0 is top left 
-
-#wmctrl -i -r "$wid" -e 0,0,0,800,600
 coords=$(xwininfo -id "$wid" | grep -E "Absolute upper-left X:| Absolute upper-left Y: |Width:|Height:")
 coords_relative=$(xwininfo -id "$wid" | grep -E "Relative upper-left X:| Relative upper-left Y: |Width:|Height:")
 coords2=$(xwininfo -id "$wid" | grep -E "Width:|Height:")
@@ -42,8 +38,6 @@ max_height=1100
 min_width=300
 max_width=1920
 # check if the window is out of bounds
-# assume arg="move" or "resize" and side="left|right|top|down"
-
 if [ "$arg" = "move" ]; then
     case "$side" in
         left)

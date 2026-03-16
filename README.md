@@ -1,0 +1,1 @@
+# xfce-move-resize-script

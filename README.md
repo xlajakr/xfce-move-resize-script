@@ -1,6 +1,7 @@
 # XFCE Move and Resize Script
 
-This script fixes the problem of changing the step size of resizing/moving windows with the keyboard.  
+This shell script fixes the problem of changing the step size of resizing/moving windows with the keyboard.  
+Written in sh, should be compatible with other shells.
 Works on my machine; no idea if it will work on yours.  
 Please excuse the horrible code I quickly produced. Thanks.
 
